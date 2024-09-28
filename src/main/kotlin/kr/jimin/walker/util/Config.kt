@@ -4,11 +4,7 @@ import kr.jimin.walker.NoFrostWalkerPlugin
 
 enum class Config(val path: String) {
 
-    ENABLE("enable"),
-
-    // message
-    PREFIX("general.prefix"),
-    RELOAD("general.reload");
+    ENABLE("enable");
 
     var value: Any?
         get() = NoFrostWalkerPlugin.instance.getConfigsManager().getConfig().getString(path)
